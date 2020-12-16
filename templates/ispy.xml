@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>ispy</Name>
+  <Repository>doitandbedone/ispyagentdvr:latest</Repository>
+  <Registry>https://hub.docker.com/r/doitandbedone/ispyagentdvr/</Registry>
+  <Networking>
+    <Mode>host</Mode>
+    <Publish/>
+  </Networking>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support></Support>
+  <Project>https://www.ispyconnect.com/</Project>
+  <Overview>A new video surveillance solution for the Internet Of Things.</Overview>
+  <Category>Survilance: Status:Stable</Category>
+  <TemplateURL>https://raw.githubusercontent.com/A75G/docker-templates/master/templates/redis.xml</TemplateURL>
+  <Icon>https://ispycontent.azureedge.net/img/ispy2.png</Icon>
+  <Description>A new video surveillance solution for the Internet Of Things..</Description>
+  <Config Name="Web UI Port" Target="8090" Default="8090" Mode="tcp" Description="To access the panel" Type="Port" Display="always" Required="true" Mask="false">8090</Config>
+  <Config Name="Turn Server Port" Target="3478" Default="3478" Mode="udp" Description="Main port used for turn server communication." Type="Port" Display="always" Required="true" Mask="false">3478</Config>
+  <Config Name="WebRTCport" Target="50000-50010" Default="50000-50010" Mode="udp" Description="Ports used to create connections or WebRTC. These will be used as needed.." Type="Port" Display="always" Required="true" Mask="false">50000-50010</Config>
+  <Config Name="Config" Target="/ispy/config" Default="/agent/Media/XML/" Mode="rw" Description="Data" Type="Path" Display="always" Required="true" Mask="false">/agent/Media/XML/</Config>
+  <Config Name="Media" Target="/ispy/media" Default="/agent/Media/WebServerRoot/Media/" Mode="rw" Description="Data" Type="Path" Display="always" Required="true" Mask="false">/agent/Media/WebServerRoot/Media/</Config>
+</Container>
